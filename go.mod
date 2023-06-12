@@ -1,4 +1,4 @@
-module lizh
+module github.com/peerless6372/lizh
 
 go 1.20
 
