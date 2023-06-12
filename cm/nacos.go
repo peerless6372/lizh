@@ -2,7 +2,7 @@
 // @Description
 // @Author lizh
 // @Date   2023/6/11  5:25
-package config
+package cm
 
 import (
 	"github.com/nacos-group/nacos-sdk-go/v2/clients"
