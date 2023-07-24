@@ -64,12 +64,12 @@ func NewNacosCli(nacosCcfg NacosClicfg, nacosScfg NacosServercfg) (namingClient 
 
 	// 至少一个ServerConfig
 	serverConfigs := []constant.ServerConfig{
-		{
-			IpAddr:      nacosScfg.IpAddr,
-			ContextPath: nacosScfg.ContextPath,
-			Port:        nacosScfg.Port,
-			Scheme:      nacosScfg.Scheme,
-		},
+		*constant.NewServerConfig(
+			nacosScfg.IpAddr,
+			nacosScfg.Port,
+			constant.WithScheme(nacosScfg.Scheme),
+			constant.WithContextPath(nacosScfg.ContextPath),
+		),
 		//{
 		//	IpAddr:      "console2.nacos.io",
 		//	ContextPath: "/nacos",
